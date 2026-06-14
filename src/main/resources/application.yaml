@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: catalogue-management
+
+logging:
+  level:
+    org.springframework.test.context.support: WARN

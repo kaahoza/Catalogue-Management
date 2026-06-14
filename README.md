@@ -33,7 +33,7 @@ ___
     docker network create catalogue-network
 
  ## 2. **Build docker image**
-    docker build -t catalogue-management .
+    docker build -t catalogue-management.
 
  ## 3. **Run docker image inside the network**
     docker run -d --name cataloguemanagement --network catalogue-network -p 8080:8080 catalogue-management
@@ -56,6 +56,8 @@ ___
 # Accessing the API using Swagger
  Open your browser and go to http://localhost:8080/swagger-ui/index.html#/
  <img src="./img.png"/>
+
+___
 
 
 
