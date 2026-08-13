@@ -16,19 +16,23 @@ public class BookService {
         this.repository = repository;
     }
 
-    public List<Book> findAll() {
+    public List<Book> getAllBooks() {
         return repository.findAll();
     }
 
-    public Book save(Book book) {
+    public Book saveBook(Book book) {
         return repository.save(book);
+    }
+
+    public Book getBookById(Long id) {
+        return repository.findById(id).orElse(null);
     }
 
     public Book update(Long id, Book book) {
         book.setId(id);
         return repository.save(book);
     }
-    public void delete(Long id) {
+    public void deleteBook(Long id) {
         repository.deleteById(id);
     }
 }
